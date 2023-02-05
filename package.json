@@ -1,0 +1,34 @@
+{
+  "name": "rokartur",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build --mode production --assetsDir . --outDir dist --base /",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "dayjs": "^1.11.7",
+    "gsap": "^3.11.4",
+    "lightgallery": "^2.7.0",
+    "preact": "^10.11.3",
+    "preact-async-route": "^2.2.1",
+    "preact-router": "^4.1.0",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-animated-cursor": "^2.5.2",
+    "react-helmet-async": "^1.3.0",
+    "react-locomotive-scroll": "^0.2.2",
+    "react-markdown": "^8.0.4",
+    "remark-gfm": "^3.0.1",
+    "remark-html": "^15.0.1",
+    "sass": "^1.57.1",
+    "swr": "^2.0.0",
+    "use-local-storage": "^2.3.6"
+  },
+  "devDependencies": {
+    "@preact/preset-vite": "^2.4.0",
+    "vite": "^4.0.0"
+  }
+}

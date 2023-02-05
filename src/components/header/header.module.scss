@@ -1,0 +1,250 @@
+@import "src/styles/variables";
+
+.main {
+  z-index: 888;
+  position: relative;
+
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: auto;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.component {
+  z-index: 898;
+
+  padding: 14px 2.5rem 14px;
+
+  transition: background-color .4s, border-bottom-color .4s;
+}
+
+.content {
+  margin: 0 auto;
+
+  width: 100%;
+  max-width: 80rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logoText {
+  fill: $neutral-900;
+
+  transition: fill .4s;
+}
+
+.links {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  gap: 32px;
+}
+
+.link {
+  padding: 12px 16px;
+
+  display: flex;
+  justify-content: left;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+
+  background-color: transparent;
+  border: 1px solid $white;
+  border-radius: 8px;
+  cursor: pointer;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  text-align: center;
+  color: $white;
+
+  transition: transform .2s, box-shadow .2s, color .2s, background-color .2s;
+
+  &:hover {
+    box-shadow: 3px 3px $white;
+  }
+
+  &:active {
+    transform: translate(3px, 3px);
+
+    box-shadow: 0 0 $white;
+  }
+}
+
+.linkActive {
+  @extend .link;
+
+  box-shadow: 0 0 $white;
+  background-color: $white;
+  color: $black;
+
+  &:hover {
+    box-shadow: 0 0 transparent;
+  }
+}
+
+.componentHamburger {
+  z-index: 101;
+
+  position: fixed;
+
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: auto;
+
+  width: 100vw;
+  padding: 1rem;
+
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.linkHamburger {
+  padding: 10px 0;
+
+  display: flex;
+  justify-content: left;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5rem;
+  text-align: center;
+  color: $neutral-700;
+
+  transition: color .4s, padding .4s;
+}
+
+.linksHamburger {
+  position: fixed;
+  z-index: 99;
+
+  padding: 0 1rem;
+
+  top: 0;
+  left: 0;
+  right: 0;
+
+  width: calc(100% - 58px);
+
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  gap: 12px;
+
+  transform: translateY(-460px);
+
+  transition: transform .4s;
+}
+
+.hamburgerIcon {
+  z-index: 100;
+
+  padding: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+
+  background-color: transparent;
+  border: 1px solid $white;
+  border-radius: 8px;
+  cursor: pointer;
+
+  transition: transform .2s, box-shadow .2s;
+
+  &:hover {
+    box-shadow: 3px 3px $white;
+
+    @media screen and (max-width: 500px) {
+      box-shadow: 0 0 $white;
+    }
+  }
+
+  &:active {
+    transform: translate(3px, 3px);
+
+    box-shadow: 0 0 $white;
+  }
+}
+
+.hamburgerIconActive {
+  @extend .hamburgerIcon;
+
+  transform: translate(0, 0);
+
+  box-shadow: 0 0 $white;
+  background-color: $white;
+  color: $black;
+
+  .hamburgerIconSVG {
+    .hamburgerStroke1 { background-color: $black }
+    .hamburgerStroke2 { background-color: $black }
+    .hamburgerStroke3 { background-color: $black }
+  }
+
+  &:hover {
+    box-shadow: 0 0 transparent;
+  }
+}
+
+.hamburgerIconSVG {
+  padding: 5px 2px;
+
+  width: 20px;
+  height: 20px;
+
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 6px;
+}
+
+@mixin hamburgerIconStroke {
+  position: absolute;
+
+  width: 16px;
+  height: 2px !important;
+
+  transition: background .4s;
+  background-color: $white;
+}
+
+.hamburgerStroke1 {
+  @include hamburgerIconStroke;
+  top: 3px;
+}
+
+.hamburgerStroke2 {
+  @include hamburgerIconStroke;
+}
+
+.hamburgerStroke3 {
+  @include hamburgerIconStroke;
+  width: 9px;
+  bottom: 3px;
+}
+

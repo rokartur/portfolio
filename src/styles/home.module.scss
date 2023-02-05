@@ -1,0 +1,304 @@
+@import "variables";
+
+.mainContainer {
+  margin: 0 auto;
+
+  width: 100%;
+  max-width: 80rem;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  animation: fade .3s;
+}
+
+@keyframes fade {
+  from {opacity: 0}
+  to {opacity: 1}
+}
+
+.heroContainer {
+  position: relative;
+
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 64px;
+
+  transition: gap .4s;
+
+  @media screen and (max-width: 850px) {
+    gap: 32px;
+  }
+
+  h1 {
+    font-weight: 800;
+    font-size: 144px;
+    line-height: 100%;
+    color: white;
+    text-align: center;
+
+    transition: font-size .4s;
+
+    @media screen and (max-width: 850px) {
+      font-size: 86px;
+    }
+  }
+
+  .headingSeparator {
+    display: none;
+
+    @media screen and (max-width: 850px) {
+      display: flex;
+    }
+  }
+
+  .mouse {
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: $branding;
+    border-radius: 50%;
+  }
+
+  @keyframes moveWheel {
+    0% {
+      opacity: 0;
+      transform: translateY(-1rem);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(1rem);
+    }
+  }
+
+  .orangeCircleFirst {
+    position: absolute;
+
+    mix-blend-mode: darken;
+
+    transform: translateY(-50px);
+
+    @media screen and (max-width: 850px) {
+      transform: translateY(-50px);
+    }
+  }
+}
+
+.secondSection,
+.thirdSection {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+
+  @media screen and (max-width: 1110px) {
+    height: max-content !important;
+  }
+
+  .secondSectionText,
+  .thirdSectionText {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    h2, h4 {
+      position: relative;
+      z-index: 0;
+      padding: 0 24px;
+
+      font-weight: 800;
+      font-size: 86px;
+      color: #0A0A0A;
+    }
+
+    .showParagraph {
+      position: absolute;
+      z-index: 0;
+
+      height: 100%;
+      background-color: $branding;
+    }
+  }
+}
+
+.thirdSection {
+  height: 80vh;
+}
+
+.secondSectionFirstProject {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 32px;
+
+  @media screen and (max-width: 1110px) {
+    padding: 24px;
+
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .secondSectionFirstProjectImage {
+    border-radius: 8px;
+    pointer-events: none;
+
+    @media screen and (max-width: 1110px) {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .secondSectionFirstProjectDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    @media screen and (max-width: 1110px) {
+      justify-content: center;
+      align-items: center;
+    }
+
+    h3 {
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 100%;
+      color: $white;
+    }
+
+    .secondSectionFirstProjectDetailsDescription {
+      max-width: 320px;
+
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 24px;
+      color: $neutral-300;
+
+      @media screen and (max-width: 1110px) {
+        text-align: center;
+      }
+    }
+
+    .secondSectionFirstProjectDetailsDate {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+      color: $neutral-400;
+    }
+  }
+}
+
+.secondSectionFirstProjectActions {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.secondSectionLinks {
+  padding: 12px 16px;
+
+  width: max-content;
+
+  display: flex;
+  justify-content: left;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+
+  background-color: transparent;
+  border: 1px solid $white;
+  border-radius: 8px;
+  cursor: pointer;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  text-align: center;
+  color: $white;
+
+  transition: transform .2s, box-shadow .2s;
+
+  &:hover {
+    box-shadow: 3px 3px $white;
+  }
+
+  &:active {
+    transform: translate(3px, 3px);
+
+    box-shadow: 0 0 $white;
+  }
+}
+
+.thirdSectionSkillsList {
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  gap: 48px;
+
+  @media screen and (max-width: 1110px) {
+    padding: 24px;
+  }
+}
+
+.skillsCategory {
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  gap: 16px;
+
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 100%;
+  color: $white;
+
+  .skillsList {
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+}
+
+.footer {
+  padding: 0 48px 32px 48px;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+
+  @media screen and (max-width: 460px) {
+    height: 70vw;
+    justify-content: end;
+    flex-direction: column;
+    gap: 32px;
+  }
+}
+
+.socialIcons {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 24px;
+}
+
+.copyright {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  color: $white;
+}
