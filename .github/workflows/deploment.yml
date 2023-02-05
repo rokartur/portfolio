@@ -37,7 +37,7 @@ jobs:
           port: ${{ secrets.REMOTE_PORT }}
           script: |
             cd /home/jiolwdn/www/
-            rm *
+            rm *.html *.css *.js *.png *.svg *.otf *.txt
 
       - name: Deploy new site
         uses: wlixcc/SFTP-Deploy-Action@v1.2.4
