@@ -1,0 +1,36 @@
+@import "src/styles/variables";
+
+.footer {
+  padding: 0 32px 32px;
+
+  margin: 0 auto;
+
+  width: 100%;
+  max-width: 80rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+
+  @media screen and (max-width: 460px) {
+    height: 70vw;
+    justify-content: end;
+    flex-direction: column;
+    gap: 32px;
+  }
+}
+
+.socialIcons {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 24px;
+}
+
+.copyright {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  color: $white;
+}

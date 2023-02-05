@@ -1,7 +1,7 @@
-import styles from "../../styles/code.module.scss";
+import styles from "../styles/code.module.scss";
 
-import SEO from "../../components/seo/seo.jsx";
-import scrollToTop from "../../utils/scrollToTop.jsx";
+import SEO from "../components/seo/seo.jsx";
+import scrollToTop from "../utils/scrollToTop.jsx";
 
 const NotFound = () => {
     scrollToTop()

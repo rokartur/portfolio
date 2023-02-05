@@ -88,17 +88,17 @@ const Header = () => {
 
         gsap.to(
             "#hamburgerIconStroke1",
-            {width: 16, x: 0, y: 0, rotate: 0, opacity: 1, duration: .3, delay: .1, ease: "back"}
+            {width: 16, x: 0, y: 0, rotate: 0, opacity: 1, duration: .3, ease: "back"}
         );
 
         gsap.to(
             "#hamburgerIconStroke2",
-            {width: 16, x: 0, y: 0, rotate: 0, opacity: 1, duration: .3, delay: .1, ease: "back"}
+            {width: 16, x: 0, y: 0, rotate: 0, opacity: 1, duration: .3, ease: "back"}
         );
 
         gsap.to(
             "#hamburgerIconStroke3",
-            {width: 9, x: 0, y: 0, rotate: 0, opacity: 1, duration: .3, delay: .1, ease: "back"}
+            {width: 9, x: 0, y: 0, rotate: 0, opacity: 1, duration: .3, ease: "back"}
         );
     }
 
@@ -159,7 +159,7 @@ const Header = () => {
 
             <nav className={styles.linksHamburger}
                  id={"hamburgerNavLinks"}
-                 style={hamburgerOpen ? { transform: "translate(0, 1rem)" } : { transform: "translate(500px, 1rem)" }}
+                 style={hamburgerOpen ? { transform: "translateX(0)" } : { transform: "translate(500px)" }}
             >
                 <Link className={styles.link}
                       id={"hamburgerNavLink"}
