@@ -20,11 +20,11 @@ const NotFound = () => {
                 </h1>
 
                 <p className={styles.content}>
-                    Opps! Nie znaleziono storny
+                    Opps! Page not found
                 </p>
 
                 <a className={styles.backButton} href={"/"}>
-                    Wróć do strony głównej
+                    Back to home
                 </a>
             </main>
         </>

@@ -73,12 +73,12 @@ const Home = () => {
             {
                 translateX: "0",
                 opacity: 1,
-                duration: .3,
+                duration: .4,
                 ease: "ease",
                 scrollTrigger: {
                     trigger: "#firstProjetImage",
-                    start: "-13% 60%",
-                    end: "bottom 70%",
+                    start: "top 60%",
+                    end: "50% 60%",
                     scrub: 1,
                 }
             });
@@ -92,13 +92,13 @@ const Home = () => {
             {
                 opacity: 1,
                 translateY: "0",
-                duration: .3,
+                duration: .4,
                 ease: "back",
                 stagger: .2,
                 scrollTrigger: {
                     trigger: "#firstProjetImage",
-                    start: "-13% 60%",
-                    end: "70% 60%",
+                    start: "top 60%",
+                    end: "50% 60%",
                     scrub: 1,
                 }
             });
@@ -327,8 +327,8 @@ const Home = () => {
                                 April 29, 2022
                             </p>
 
-                            <div className={styles.secondSectionFirstProjectActions}>
-                                <a id={"firstProjectDetails"} className={styles.secondSectionLinks} href={"https://www.figma.com/file/ZFVCu7wBQwCggt84ISD4Qf/nethizer?node-id=0%3A1&t=EvtgvVL5MI0K2krK-1"} target={"_blank"}>
+                            <div id={"firstProjectDetails"} className={styles.secondSectionFirstProjectActions}>
+                                <a className={styles.secondSectionLinks} href={"https://www.figma.com/file/ZFVCu7wBQwCggt84ISD4Qf/nethizer?node-id=0%3A1&t=EvtgvVL5MI0K2krK-1"} target={"_blank"}>
                                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M10.0001 1.66663H7.22504C5.6917 1.66663 4.45007 2.90829 4.45007 4.44163C4.45007 5.97496 5.6917 7.21663 7.22504 7.21663H10.0001V1.66663Z" fill="#FE481C"/>
                                         <path opacity="0.4" d="M10.0001 7.2251H7.22504C5.6917 7.2251 4.45007 8.46677 4.45007 10.0001C4.45007 11.5334 5.6917 12.7751 7.22504 12.7751H10.0001V7.2251Z" fill="#FE481C"/>
@@ -340,7 +340,7 @@ const Home = () => {
                                     Design in Figma
                                 </a>
 
-                                <a id={"firstProjectDetails"} className={styles.secondSectionLinks} href={"https://nethizer.pl"} target={"_blank"}>
+                                <a className={styles.secondSectionLinks} href={"https://nethizer.pl"} target={"_blank"}>
                                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path opacity="0.4" d="M6.37493 17.4249C6.34993 17.4249 6.31659 17.4416 6.29159 17.4416C4.67493 16.6416 3.35826 15.3166 2.54993 13.6999C2.54993 13.6749 2.56659 13.6416 2.56659 13.6166C3.58326 13.9166 4.63326 14.1416 5.67493 14.3166C5.85826 15.3666 6.07493 16.4082 6.37493 17.4249Z" fill="#FE481C"/>
                                         <path opacity="0.4" d="M17.45 13.7082C16.625 15.3666 15.25 16.7082 13.575 17.5166C13.8916 16.4582 14.1583 15.3916 14.3333 14.3166C15.3833 14.1416 16.4166 13.9166 17.4333 13.6166C17.425 13.6499 17.45 13.6832 17.45 13.7082Z" fill="#FE481C"/>
