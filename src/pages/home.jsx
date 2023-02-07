@@ -5,10 +5,13 @@ import {gsap} from "gsap";
 
 import SEO from "../components/seo/seo.jsx";
 import CustomImage from "../components/customImage/customImage.jsx";
+import scrollToTop from "../utils/scrollToTop.jsx";
 
 import nethizer1 from "../assets/images/projects/nethizer/nethizer-1.png"
 
 const Home = () => {
+    scrollToTop()
+
     useEffect(() => {
         gsap.fromTo(
             "#orange-circle-1",

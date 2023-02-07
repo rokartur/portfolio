@@ -10,6 +10,7 @@ import {ScrollTrigger} from "gsap/ScrollTrigger";
 import Header from "./components/header/header.jsx";
 import Home from "./pages/home.jsx";
 import AboutMe from "./pages/aboutme.jsx";
+import Portfolio from "./pages/portfolio.jsx";
 import NotFound from "./pages/404.jsx";
 import Footer from "./components/footer/footer.jsx";
 
@@ -28,6 +29,7 @@ export const App = () => {
                 <Router>
                     <AsyncRoute path={"/"} component={Home}/>
                     <AsyncRoute path={"/about-me"} component={AboutMe}/>
+                    <AsyncRoute path={"/portfolio/:project?"} component={Portfolio}/>
 
                     <NotFound default/>
                 </Router>
