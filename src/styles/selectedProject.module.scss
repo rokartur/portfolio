@@ -109,7 +109,7 @@
           text-align: center;
           color: $white;
 
-          transition: transform .2s, box-shadow .2s;
+          transition: box-shadow .2s;
 
           &:hover {
             box-shadow: 3px 3px $white;

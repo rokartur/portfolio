@@ -13,7 +13,7 @@ const AboutMe = () => {
         gsap.fromTo(
             "#aboutMeItem",
             {
-                translateX: "-=100",
+                translateX: "-=50",
                 opacity: 0,
                 scale: .8,
             },
@@ -23,13 +23,13 @@ const AboutMe = () => {
                 scale: 1,
                 duration: .4,
                 ease: "back",
-                stagger: .2,
+                stagger: .1,
             });
 
         gsap.fromTo(
             "#aboutMeLink",
             {
-                translateY: "+=100",
+                translateY: "+=50",
                 opacity: 0,
                 scale: .8,
             },
@@ -39,8 +39,8 @@ const AboutMe = () => {
                 scale: 1,
                 duration: .4,
                 ease: "back",
-                delay: .9,
-                stagger: .2,
+                delay: .4,
+                stagger: .1,
             });
     }, []);
 

@@ -19,13 +19,14 @@ const AllProjects = () => {
             {
                 translateX: "-=100",
                 opacity: 0,
+                scale: .8,
             },
             {
                 translateX: 0,
                 opacity: 1,
+                scale: 1,
                 duration: .4,
                 ease: "back",
-                stagger: .3,
             });
 
         gsap.fromTo(

@@ -25,7 +25,32 @@
   justify-content: left;
   align-items: center;
   gap: 24px;
+
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $white;
+
+    border-radius: 4px;
+
+    transition: border-radius .4s;
+
+    &:hover {
+      border-radius: 100%;
+
+      svg { animation: rotateIcon 1s both }
+    }
+  }
 }
+
+@keyframes rotateIcon {
+  0%, 20%, 50%, 80%, 100% { transform: rotate(0) }
+  40% { transform: rotate(-30deg) }
+  60% { transform: rotate(-15deg) }
+}
+
 
 .copyright {
   font-weight: 600;

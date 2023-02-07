@@ -1,8 +1,9 @@
 import styles from "../styles/selectedProject.module.scss";
 
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import Match from "preact-router/match";
 import Carousel from "framer-motion-carousel";
+import {gsap} from "gsap";
 
 import SEO from "../components/seo/seo.jsx";
 import CustomImage from "../components/customImage/customImage.jsx";
@@ -27,6 +28,24 @@ const SelectedProject = () => {
     const pad = "00"
     const ans = pad.substring(0, pad.length - str.length) + str + "."
 
+    useEffect(() => {
+        gsap.fromTo(
+            "#selectedProjectElement",
+            {
+                translateX: "-=50",
+                opacity: 0,
+                scale: .8,
+            },
+            {
+                translateX: 0,
+                scale: 1,
+                opacity: 1,
+                duration: .4,
+                ease: "back",
+                stagger: .1,
+            });
+    }, []);
+
     return (
         <>
             <Match>
@@ -46,16 +65,16 @@ const SelectedProject = () => {
                     <main className={styles.mainContainer}>
                         <section className={styles.projectContent}>
                             <div className={styles.heading}>
-                                <p>
+                                <p id={"selectedProjectElement"}>
                                     {project.type}
                                 </p>
 
-                                <h1>
+                                <h1 id={"selectedProjectElement"}>
                                     {project.name}
                                 </h1>
 
                                 <div className={styles.links}>
-                                    <p>
+                                    <p id={"selectedProjectElement"}>
                                         Links
                                     </p>
 
@@ -67,10 +86,10 @@ const SelectedProject = () => {
                                                  icon
                                              }) => {
                                                 return (
-                                                    <a  className={styles.link} href={url} target={"_blank"}>
-                                                    <span>
-                                                        {icon}
-                                                    </span>
+                                                    <a id={"selectedProjectElement"} className={styles.link} href={url} target={"_blank"}>
+                                                        <span>
+                                                            {icon}
+                                                        </span>
 
                                                         {name}
                                                     </a>
@@ -82,33 +101,33 @@ const SelectedProject = () => {
                             </div>
 
                             <div className={styles.projectDetails}>
-                                <p className={styles.projectNumber}>
+                                <p id={"selectedProjectElement"} className={styles.projectNumber}>
                                     {ans}
                                 </p>
 
                                 <div className={styles.projectSecondDetails}>
-                                    <p>
+                                    <p id={"selectedProjectElement"}>
                                         Date
                                     </p>
 
-                                    <p>
+                                    <p id={"selectedProjectElement"}>
                                         {project.date}
                                     </p>
                                 </div>
 
                                 <div className={styles.projectSecondDetails}>
-                                    <p>
+                                    <p id={"selectedProjectElement"}>
                                         Role
                                     </p>
 
-                                    <p>
+                                    <p id={"selectedProjectElement"}>
                                         {project.role}
                                     </p>
                                 </div>
                             </div>
                         </section>
 
-                        <section className={styles.carouselContainer}>
+                        <section id={"selectedProjectElement"} className={styles.carouselContainer}>
                             <Carousel
                                 autoPlay
                                 loop={true}
