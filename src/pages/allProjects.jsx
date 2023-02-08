@@ -12,8 +12,6 @@ const AllProjects = () => {
     scrollToTop()
 
     useEffect(() => {
-        projectsData.reverse()
-
         gsap.fromTo(
             "#heading",
             {
@@ -62,7 +60,7 @@ const AllProjects = () => {
                 </div>
 
                 <div className={styles.projectsList}>
-                    {projectsData.reverse().map(
+                    {projectsData.map(
                         ({
                             id,
                             name,
@@ -70,7 +68,7 @@ const AllProjects = () => {
                             type,
                             path
                          }) => (
-                        <a key={id} id={"project"} className={styles.project} href={`/portfolio/${path}#id=${id}`}>
+                        <a key={id} id={"project"} className={styles.project} href={`/portfolio/${path}`}>
                             <CustomImage
                                 className={styles.projectImage}
                                 source={thumbnail}

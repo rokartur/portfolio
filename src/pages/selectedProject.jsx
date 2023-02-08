@@ -12,21 +12,19 @@ import projectsData from "../data/projects.data.jsx";
 
 const SelectedProject = () => {
     const [path, setPath] = useState("");
-    const [projectIndex, setProjectIndex] = useState(0);
-
-    const pathID = path.charAt(path.length - 1);
-
-    projectsData.findIndex((element, index) => {
-        if (element.id === Number(pathID)) {
-            setProjectIndex(index)
-        }
-    })
+    const [projectIndex, setProjectIndex] = useState(null);
 
     const project = projectsData[Number(projectIndex)]
 
     const str = "" + project.id
     const pad = "00"
     const ans = pad.substring(0, pad.length - str.length) + str + "."
+
+    projectsData.findIndex((element, index) => {
+        if (element.path === path.slice(11)) {
+            setProjectIndex(index)
+        }
+    })
 
     useEffect(() => {
         gsap.fromTo(

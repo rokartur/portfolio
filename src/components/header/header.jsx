@@ -1,10 +1,8 @@
 import styles from "./header.module.scss";
 
 import {useCallback, useEffect, useState} from "react";
-
 import {gsap} from "gsap";
 import {Link} from "preact-router/match";
-
 import scrollToTop from "../../utils/scrollToTop.jsx";
 
 const Header = () => {
