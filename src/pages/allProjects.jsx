@@ -51,8 +51,8 @@ const AllProjects = () => {
     return (
         <>
             <SEO
-                title={"Portfolio"}
-                description={""}
+                title={"portfolio"}
+                description={"My all projects"}
                 path={"/portfolio"}
             />
 

@@ -4,8 +4,8 @@ import {useEffect} from "react";
 
 import {gsap} from "gsap";
 import dayjs from "dayjs";
-import relativeTime from "dayjs/plugin/relativeTime"
 import "dayjs/locale/pl";
+import relativeTime from "dayjs/plugin/relativeTime"
 
 import SEO from "../components/seo/seo.jsx";
 import scrollToTop from "../utils/scrollToTop.jsx";
@@ -57,8 +57,8 @@ const AboutMe = () => {
     return (
         <>
             <SEO
-                title={"About me"}
-                description={"I am a passionate programmer and web designer. I started programming at the end of 2018. I am a perfectionist, I try very hard to take care of the details of my works."}
+                title={"about me"}
+                description={`I'm Artur, ${myAge} old student. I'm a passionate programmer and web designer.`}
                 path={"/about-me"}
             />
 
@@ -79,7 +79,7 @@ const AboutMe = () => {
                     <p className={styles.supportingText}
                        id={"aboutMeItem"}
                     >
-                        I'm Artur, {myAge} old student and web developer. I'm a passionate programmer and web designer. I started programming at the end of 2018.
+                        I'm Artur, {myAge} old student. I'm a passionate programmer and web designer. I started programming at the end of 2018.
                         Furthermore, I'm a perfectionist, I try very hard to take care of the details of my works.
                         I'm not afraid to take on new challenges!
                     </p>

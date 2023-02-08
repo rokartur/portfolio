@@ -2,6 +2,9 @@ import styles from "../styles/home.module.scss";
 
 import {useEffect} from "react";
 import {gsap} from "gsap";
+import dayjs from "dayjs";
+import "dayjs/locale/pl";
+import relativeTime from "dayjs/plugin/relativeTime"
 
 import SEO from "../components/seo/seo.jsx";
 import CustomImage from "../components/customImage/customImage.jsx";
@@ -11,6 +14,9 @@ import nethizer1 from "../assets/images/projects/nethizer/nethizer-1.png"
 
 const Home = () => {
     scrollToTop()
+
+    dayjs.extend(relativeTime)
+    const myAge = dayjs("2004-02-05").toNow(true)
 
     useEffect(() => {
         scrollToTop()
@@ -287,8 +293,8 @@ const Home = () => {
     return (
         <>
             <SEO
-                title={"Home"}
-                description={""}
+                title={"home"}
+                description={`I'm Artur, ${myAge} old student. I'm a passionate programmer and web designer.`}
                 path={"/"}
             />
 
