@@ -42,6 +42,8 @@ const AboutMe = () => {
                 delay: .4,
                 stagger: .1,
             });
+
+        return () => scrollToTop()
     }, []);
 
 

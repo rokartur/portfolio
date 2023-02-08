@@ -13,6 +13,8 @@ const Home = () => {
     scrollToTop()
 
     useEffect(() => {
+        scrollToTop()
+
         gsap.fromTo(
             "#orange-circle-1",
             {
@@ -79,9 +81,9 @@ const Home = () => {
                 duration: .4,
                 ease: "ease",
                 scrollTrigger: {
-                    trigger: "#firstProjetImage",
-                    start: "top 60%",
-                    end: "50% 60%",
+                    trigger: "#hero-paragraph-background-color",
+                    start: "50% 55%",
+                    end: "bottom 55%",
                     scrub: 1,
                 }
             });
@@ -89,20 +91,21 @@ const Home = () => {
         gsap.fromTo(
             "#firstProjectDetails",
             {
-                opacity: 0,
                 translateY: "-=50",
+                opacity: 0,
             },
             {
+                translateY: 0,
                 opacity: 1,
-                translateY: "0",
                 duration: .4,
                 ease: "back",
-                stagger: .2,
+                stagger: .1,
                 scrollTrigger: {
-                    trigger: "#firstProjetImage",
-                    start: "top 60%",
-                    end: "50% 60%",
+                    trigger: "#hero-paragraph-background-color",
+                    start: "50% 55%",
+                    end: "bottom 55%",
                     scrub: 1,
+                    markers: true
                 }
             });
 
@@ -142,6 +145,8 @@ const Home = () => {
                     scrub: 1,
                 }
             });
+
+        return () => scrollToTop()
     }, []);
 
     const languages = [

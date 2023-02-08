@@ -7,10 +7,13 @@ import {gsap} from "gsap";
 
 import SEO from "../components/seo/seo.jsx";
 import CustomImage from "../components/customImage/customImage.jsx";
+import scrollToTop from "../utils/scrollToTop.jsx";
 
 import projectsData from "../data/projects.data.jsx";
 
 const SelectedProject = () => {
+    scrollToTop()
+
     const [path, setPath] = useState("");
     const [projectIndex, setProjectIndex] = useState(null);
 
@@ -27,6 +30,8 @@ const SelectedProject = () => {
     })
 
     useEffect(() => {
+        scrollToTop()
+
         gsap.fromTo(
             "#selectedProjectElement",
             {
@@ -42,6 +47,8 @@ const SelectedProject = () => {
                 ease: "back",
                 stagger: .1,
             });
+
+        return () => scrollToTop()
     }, []);
 
     return (

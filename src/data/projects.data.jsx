@@ -138,7 +138,7 @@ const projectsData = [
     },
     {
         id: 3,
-        name: 'ZSTiO "Mechanik" w TG',
+        name: 'ZSTiO w TG',
         thumbnail: mechaniktgCover,
         type: "website",
         date: "April 02, 2022",

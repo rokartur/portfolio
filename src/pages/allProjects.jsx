@@ -12,6 +12,8 @@ const AllProjects = () => {
     scrollToTop()
 
     useEffect(() => {
+        scrollToTop()
+
         gsap.fromTo(
             "#heading",
             {
@@ -42,6 +44,8 @@ const AllProjects = () => {
                 ease: "back",
                 stagger: .1,
             });
+
+        return () => scrollToTop()
     }, []);
 
     return (
