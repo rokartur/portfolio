@@ -105,7 +105,6 @@ const Home = () => {
                     start: "50% 55%",
                     end: "bottom 55%",
                     scrub: 1,
-                    markers: true
                 }
             });
 
