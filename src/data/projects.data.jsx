@@ -16,6 +16,7 @@ import mechaniktgCover from "../assets/images/projects/mechaniktg/mechaniktg-cov
 import mtg1 from "../assets/images/projects/mechaniktg/mtg-1.png";
 import mtg2 from "../assets/images/projects/mechaniktg/mtg-2.png";
 import mtg3 from "../assets/images/projects/mechaniktg/mtg-3.png";
+import mtg4 from "../assets/images/projects/mechaniktg/mtg-4.png";
 
 // mergeit
 import mergeitCover from "../assets/images/projects/mergeit/mergeit-cover.png";
@@ -192,18 +193,23 @@ const projectsData = [
         images: [
             {
                 src: mtg1,
-                width: 1440,
-                height: 921,
+                width: 1439,
+                height: 909,
             },
             {
                 src: mtg2,
-                width: 1920,
-                height: 1512,
+                width: 1438,
+                height: 909,
             },
             {
                 src: mtg3,
                 width: 1440,
-                height: 1000,
+                height: 909,
+            },
+            {
+                src: mtg4,
+                width: 1440,
+                height: 909,
             },
         ]
     },
