@@ -1,11 +1,8 @@
 // nethizer
 import nethizerCover from "../assets/images/projects/nethizer/nethizer-cover.png";
-import nethizer1 from "../assets/images/projects/nethizer/home-light.png";
-import nethizer2 from "../assets/images/projects/nethizer/shop-light.png";
-import nethizer3 from "../assets/images/projects/nethizer/product-light.png";
-import nethizer4 from "../assets/images/projects/nethizer/home-dark.png";
-import nethizer5 from "../assets/images/projects/nethizer/shop-dark.png";
-import nethizer6 from "../assets/images/projects/nethizer/product-dark.png";
+import nethizer1 from "../assets/images/projects/nethizer/nth-1.png";
+import nethizer2 from "../assets/images/projects/nethizer/nth-2.png";
+import nethizer3 from "../assets/images/projects/nethizer/nth-3.png";
 
 // bongocat
 import bongocatCover from "../assets/images/projects/bongocat/bongocat-cover.png";
@@ -122,33 +119,18 @@ const projectsData = [
         images: [
             {
                 src: nethizer1,
-                width: 1920,
-                height: 1804,
+                width: 1280,
+                height: 680,
             },
             {
                 src: nethizer2,
-                width: 1920,
-                height: 1407,
+                width: 1280,
+                height: 680,
             },
             {
                 src: nethizer3,
-                width: 1920,
-                height: 1256,
-            },
-            {
-                src: nethizer4,
-                width: 1920,
-                height: 1804,
-            },
-            {
-                src: nethizer5,
-                width: 1920,
-                height: 1407,
-            },
-            {
-                src: nethizer6,
-                width: 1920,
-                height: 1256,
+                width: 1280,
+                height: 680,
             },
         ]
     },
@@ -193,23 +175,23 @@ const projectsData = [
         images: [
             {
                 src: mtg1,
-                width: 1439,
-                height: 909,
+                width: 1280,
+                height: 680,
             },
             {
                 src: mtg2,
-                width: 1438,
-                height: 909,
+                width: 1280,
+                height: 680,
             },
             {
                 src: mtg3,
-                width: 1440,
-                height: 909,
+                width: 1280,
+                height: 680,
             },
             {
                 src: mtg4,
-                width: 1440,
-                height: 909,
+                width: 1280,
+                height: 680,
             },
         ]
     },
@@ -254,13 +236,13 @@ const projectsData = [
         images: [
             {
                 src: mit1,
-                width: 1913,
-                height: 987,
+                width: 1318,
+                height: 680,
             },
             {
                 src: mit2,
-                width: 1918,
-                height: 987,
+                width: 1318,
+                height: 680,
             },
         ]
     },
@@ -305,23 +287,23 @@ const projectsData = [
         images: [
             {
                 src: inout1,
-                width: 1440,
-                height: 987,
+                width: 1280,
+                height: 680,
             },
             {
                 src: inout2,
-                width: 1440,
-                height: 987,
+                width: 1280,
+                height: 680,
             },
             {
                 src: inout3,
-                width: 1440,
-                height: 987,
+                width: 1280,
+                height: 680,
             },
             {
                 src: inout4,
-                width: 1440,
-                height: 987,
+                width: 1280,
+                height: 680,
             },
         ]
     },
