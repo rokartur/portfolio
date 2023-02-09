@@ -12,8 +12,6 @@ const AllProjects = () => {
     scrollToTop()
 
     useEffect(() => {
-        scrollToTop()
-
         gsap.fromTo(
             "#heading",
             {
@@ -44,8 +42,6 @@ const AllProjects = () => {
                 ease: "back",
                 stagger: .1,
             });
-
-        return () => scrollToTop()
     }, []);
 
     return (
@@ -72,7 +68,12 @@ const AllProjects = () => {
                             type,
                             path
                          }) => (
-                        <a key={id} id={"project"} className={styles.project} href={`/portfolio/${path}`}>
+                        <a key={id}
+                           id={"project"}
+                           className={styles.project}
+                           href={`/portfolio/${path}`}
+                           onClick={() => scrollToTop()}
+                        >
                             <CustomImage
                                 className={styles.projectImage}
                                 source={thumbnail}

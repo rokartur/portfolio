@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --mode production --assetsDir . --outDir dist --base /",
+    "build": "vite build --mode production --assetsDir . --outDir docs --base /",
     "preview": "vite preview"
   },
   "dependencies": {

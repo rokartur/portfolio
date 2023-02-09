@@ -19,8 +19,6 @@ const Home = () => {
     const myAge = dayjs("2004-02-05").toNow(true)
 
     useEffect(() => {
-        scrollToTop()
-
         gsap.fromTo(
             "#orange-circle-1",
             {
@@ -150,8 +148,6 @@ const Home = () => {
                     scrub: 1,
                 }
             });
-
-        return () => scrollToTop()
     }, []);
 
     const languages = [

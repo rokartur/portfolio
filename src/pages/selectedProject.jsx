@@ -30,8 +30,6 @@ const SelectedProject = () => {
     })
 
     useEffect(() => {
-        scrollToTop()
-
         gsap.fromTo(
             "#selectedProjectElement",
             {
@@ -47,8 +45,6 @@ const SelectedProject = () => {
                 ease: "back",
                 stagger: .1,
             });
-
-        return () => scrollToTop()
     }, []);
 
     return (
