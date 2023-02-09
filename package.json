@@ -5,11 +5,11 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build",
     "dev": "vite",
-    "build": "vite build --mode production --assetsDir . --outDir dist --base /",
-    "preview": "vite preview",
-    "predeploy": "vite build --mode production --assetsDir . --outDir dist --base /",
-    "deploy": "gh-pages -d build"
+    "build": "vite build --mode production --assetsDir . --outDir build --base /",
+    "preview": "vite preview"
   },
   "dependencies": {
     "animate-css-grid": "^1.4.3",
