@@ -1,18 +1,14 @@
 {
-  "homepage": "https://rokartur.github.io/rokartur",
   "name": "rokartur",
   "private": true,
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "predeploy": "yarn build",
-    "deploy": "gh-pages -d build",
     "dev": "vite",
     "build": "vite build --mode production --assetsDir . --outDir build --base /",
     "preview": "vite preview"
   },
   "dependencies": {
-    "animate-css-grid": "^1.4.3",
     "dayjs": "^1.11.7",
     "framer-motion": "^9.0.1",
     "framer-motion-carousel": "^2.0.1",
@@ -30,7 +26,6 @@
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.4.0",
-    "gh-pages": "^5.0.0",
     "vite": "^4.0.0"
   }
 }
