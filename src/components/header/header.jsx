@@ -4,10 +4,12 @@ import {useCallback, useEffect, useState} from "react";
 import {gsap} from "gsap";
 import {Link} from "preact-router/match";
 import scrollToTop from "../../utils/scrollToTop.jsx";
+import useLocalStorage from "use-local-storage";
 
 const Header = () => {
     const [size, setSize] = useState([]);
     const [hamburgerOpen, setHamburgerOpen] = useState(false);
+    const [reduceMotion] = useLocalStorage("reduceMotion");
 
     const updateSize = useCallback(() => {
         setSize([window.innerWidth, window.innerHeight]);
@@ -22,82 +24,86 @@ const Header = () => {
         };
     }, []);
 
-    const hamburgerAnimationOpen = () => {
-        gsap.fromTo(
-            "#hamburgerNavLink",
-            {
-                translateX: "-=100",
-            },
-            {
-                translateX: "0",
-                duration: .3,
-                ease: "back",
-                stagger: .2,
-            }
-        );
+    const hamburgerAnimationOpen = (rm) => {
+        if (!reduceMotion) {
+            gsap.fromTo(
+                "#hamburgerNavLink",
+                {
+                    translateX: "-=100",
+                },
+                {
+                    translateX: "0",
+                    duration: .3,
+                    ease: "back",
+                    stagger: .2,
+                }
+            );
 
-        gsap.to(
-            "#hamburgerIconStroke1",
-            {
-                x: "-=2",
-                y: "+=6",
-                width: "+=4",
-                rotate: "45deg",
-                duration: .3,
-                ease: "back",
-            }
-        );
+            gsap.to(
+                "#hamburgerIconStroke1",
+                {
+                    x: "-=2",
+                    y: "+=6",
+                    width: "+=4",
+                    rotate: "45deg",
+                    duration: .3,
+                    ease: "back",
+                }
+            );
 
-        gsap.to(
-            "#hamburgerIconStroke2",
-            {
-                x: "-=2",
-                width: "+=4",
-                rotate: "-45deg",
-                duration: .3,
-                ease: "back",
-            }
-        );
+            gsap.to(
+                "#hamburgerIconStroke2",
+                {
+                    x: "-=2",
+                    width: "+=4",
+                    rotate: "-45deg",
+                    duration: .3,
+                    ease: "back",
+                }
+            );
 
-        gsap.to(
-            "#hamburgerIconStroke3",
-            {
-                x: "+=20",
-                opacity: 0,
-                duration: .3,
-                ease: "back",
-            }
-        );
+            gsap.to(
+                "#hamburgerIconStroke3",
+                {
+                    x: "+=20",
+                    opacity: 0,
+                    duration: .3,
+                    ease: "back",
+                }
+            );
+        }
     }
 
-    const hamburgerAnimationClose = () => {
-        gsap.fromTo(
-            "#hamburgerNavLink",
-            {
-                translateX: "+=100",
-            },
-            {
-                translateX: 0,
-                duration: .2,
-                ease: "back",
-                stagger: .1,
-            }
-        );
+    const hamburgerAnimationClose = (rm) => {
+        if (!reduceMotion) {
+            gsap.fromTo(
+                "#hamburgerNavLink",
+                {
+                    translateX: "+=100",
+                },
+                {
+                    translateX: 0,
+                    duration: .2,
+                    ease: "back",
+                    stagger: .1,
+                }
+            );
 
-        gsap.to(
-            "#hamburgerIconStroke1",
-            {width: 16, x: 0, y: 0, rotate: 0, opacity: 1, duration: .3, ease: "back"}
-        );
+            gsap.to(
+                "#hamburgerIconStroke1",
+                {width: 16, x: 0, y: 0, rotate: 0, opacity: 1, duration: .3, ease: "back"}
+            );
 
-        gsap.to(
-            "#hamburgerIconStroke2",
-            {width: 16, x: 0, y: 0, rotate: 0, opacity: 1, duration: .3, ease: "back"}
-        );
+            gsap.to(
+                "#hamburgerIconStroke2",
+                {width: 16, x: 0, y: 0, rotate: 0, opacity: 1, duration: .3, ease: "back"}
+            );
 
-        gsap.to(
-            "#hamburgerIconStroke3",
-            {width: 9, x: 0, y: 0, rotate: 0, opacity: 1, duration: .3, ease: "back"}
-        );
+            gsap.to(
+                "#hamburgerIconStroke3",
+                {width: 9, x: 0, y: 0, rotate: 0, opacity: 1, duration: .3, ease: "back"}
+            );
+        }
     }
 
     return size[0] > 500 ?
@@ -145,7 +151,7 @@ const Header = () => {
             <button className={hamburgerOpen ? styles.hamburgerIconActive : styles.hamburgerIcon}
                     onClick={() => {
                         setHamburgerOpen(hamburgerOpen => !hamburgerOpen)
-                        {hamburgerOpen ? hamburgerAnimationClose() : hamburgerAnimationOpen()}
+                        {hamburgerOpen ? hamburgerAnimationClose(reduceMotion) : hamburgerAnimationOpen(reduceMotion)}
                     }}>
                 <div className={styles.hamburgerIconSVG}>
                     <div className={styles.hamburgerStroke1} id={"hamburgerIconStroke1"}/>
@@ -166,7 +172,7 @@ const Header = () => {
                       onClick={() => {
                           setHamburgerOpen(false)
                           scrollToTop()
-                          {hamburgerOpen ? hamburgerAnimationClose() : hamburgerAnimationOpen()}
+                          {hamburgerOpen ? hamburgerAnimationClose(reduceMotion) : hamburgerAnimationOpen(reduceMotion)}
                       }}>
                     Portfolio
                 </Link>
@@ -178,7 +184,7 @@ const Header = () => {
                       onClick={() => {
                           setHamburgerOpen(false)
                           scrollToTop()
-                          {hamburgerOpen ? hamburgerAnimationClose() : hamburgerAnimationOpen()}
+                          {hamburgerOpen ? hamburgerAnimationClose(reduceMotion) : hamburgerAnimationOpen(reduceMotion)}
                       }}>
                     Home
                 </Link>
@@ -190,7 +196,7 @@ const Header = () => {
                       onClick={() => {
                           setHamburgerOpen(false)
                           scrollToTop()
-                          {hamburgerOpen ? hamburgerAnimationClose() : hamburgerAnimationOpen()}
+                          {hamburgerOpen ? hamburgerAnimationClose(reduceMotion) : hamburgerAnimationOpen(reduceMotion)}
                       }}>
                     About me
                 </Link>
