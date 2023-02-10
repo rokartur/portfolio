@@ -11,10 +11,7 @@ const Footer = () => {
             <div className={styles.reduceMotion}>
                 Reduce Motion
                 <button className={reduceMotion ? styles.reduceMotionButtonActive : styles.reduceMotionButton}
-                        onClick={() => {
-                            setReduceMotion(reduceMotion => !reduceMotion)
-                            window.location.reload();
-                        }}
+                        onClick={() => setReduceMotion(reduceMotion => !reduceMotion)}
                 >
                     <div className={styles.reduceMotionButtonDot}/>
                 </button>
