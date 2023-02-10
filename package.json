@@ -22,7 +22,8 @@
     "react-markdown": "^8.0.4",
     "remark-gfm": "^3.0.1",
     "remark-html": "^15.0.1",
-    "sass": "^1.57.1"
+    "sass": "^1.57.1",
+    "use-local-storage": "^2.3.6"
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.4.0",

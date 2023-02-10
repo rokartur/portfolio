@@ -9,39 +9,111 @@
   max-width: 80rem;
 
   display: flex;
-  justify-content: space-between;
-  align-items: end;
+  flex-direction: column;
+  gap: 32px;
 
   @media screen and (max-width: 500px) {
-    justify-content: end;
-    flex-direction: column;
     align-items: center;
-    gap: 32px;
   }
-}
 
-.socialIcons {
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  gap: 24px;
-
-  a {
+  .reduceMotion {
     display: flex;
-    justify-content: center;
     align-items: center;
+    gap: 12px;
 
-    background-color: $white;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    color: $white;
 
-    border-radius: 4px;
+    .reduceMotionButton {
+      padding: 6px;
+      width: 50px;
 
-    transition: border-radius .4s;
+      display: flex;
 
-    &:hover {
-      border-radius: 100%;
+      background-color: transparent;
+      border: 1px solid $destructive-300;
+      border-radius: 8px;
 
-      svg { animation: rotateIcon 1s both }
+      transition: border .2s;
+
+      &:active {
+        border: 1px solid $success-300;
+
+        .reduceMotionButtonDot {
+          transform: translateX(20px);
+
+          background-color: $success-300;
+        }
+      }
+
+      .reduceMotionButtonDot {
+        width: 16px;
+        height: 16px;
+        background-color: $destructive-300;
+        border-radius: 4px;
+
+        transition: transform .2s, background-color .2s;
+      }
     }
+
+    .reduceMotionButtonActive {
+      @extend .reduceMotionButton;
+
+      border: 1px solid $success-300;
+
+      .reduceMotionButtonDot {
+        transform: translateX(20px);
+
+        background-color: $success-300;
+      }
+    }
+  }
+
+  .footerContent {
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: 500px) {
+      justify-content: end;
+      flex-direction: column;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .socialIcons {
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      gap: 24px;
+
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background-color: $white;
+
+        border-radius: 4px;
+
+        transition: border-radius .4s;
+
+        &:hover {
+          border-radius: 100%;
+
+          svg { animation: rotateIcon 1s both }
+        }
+      }
+    }
+
+    .copyright {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 100%;
+      color: $white;
+    }
+
   }
 }
 
@@ -49,12 +121,4 @@
   0%, 20%, 50%, 80%, 100% { transform: rotate(0) }
   40% { transform: rotate(-30deg) }
   60% { transform: rotate(-15deg) }
-}
-
-
-.copyright {
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 100%;
-  color: $white;
 }

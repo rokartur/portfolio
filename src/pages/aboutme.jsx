@@ -9,6 +9,7 @@ import relativeTime from "dayjs/plugin/relativeTime"
 
 import SEO from "../components/seo/seo.jsx";
 import scrollToTop from "../utils/scrollToTop.jsx";
+import useLocalStorage from "use-local-storage";
 
 const AboutMe = () => {
     scrollToTop()
@@ -16,40 +17,44 @@ const AboutMe = () => {
     dayjs.extend(relativeTime)
     const myAge = dayjs("2004-02-05").toNow(true)
 
-    useEffect(() => {
-        gsap.fromTo(
-            "#aboutMeItem",
-            {
-                translateX: "-=50",
-                opacity: 0,
-                scale: .8,
-            },
-            {
-                translateX: 0,
-                opacity: 1,
-                scale: 1,
-                duration: .4,
-                ease: "back",
-                stagger: .1,
-            });
+    const [reduceMotion] = useLocalStorage("reduceMotion");
 
-        gsap.fromTo(
-            "#aboutMeLink",
-            {
-                translateY: "+=50",
-                opacity: 0,
-                scale: .8,
-            },
-            {
-                translateY: 0,
-                opacity: 1,
-                scale: 1,
-                duration: .4,
-                ease: "back",
-                delay: .4,
-                stagger: .1,
-            });
-    }, []);
+    useEffect(() => {
+        if (!reduceMotion) {
+            gsap.fromTo(
+                "#aboutMeItem",
+                {
+                    translateX: "-=50",
+                    opacity: 0,
+                    scale: .8,
+                },
+                {
+                    translateX: 0,
+                    opacity: 1,
+                    scale: 1,
+                    duration: .4,
+                    ease: "back",
+                    stagger: .1,
+                });
+
+            gsap.fromTo(
+                "#aboutMeLink",
+                {
+                    translateY: "+=50",
+                    opacity: 0,
+                    scale: .8,
+                },
+                {
+                    translateY: 0,
+                    opacity: 1,
+                    scale: 1,
+                    duration: .4,
+                    ease: "back",
+                    delay: .4,
+                    stagger: .1,
+                });
+        }
+    }, [reduceMotion]);
 
 
     return (

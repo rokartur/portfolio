@@ -10,12 +10,14 @@ import CustomImage from "../components/customImage/customImage.jsx";
 import scrollToTop from "../utils/scrollToTop.jsx";
 
 import projectsData from "../data/projects.data.jsx";
+import useLocalStorage from "use-local-storage";
 
 const SelectedProject = () => {
     scrollToTop()
 
     const [path, setPath] = useState("");
     const [projectIndex, setProjectIndex] = useState(null);
+    const [reduceMotion] = useLocalStorage("reduceMotion");
 
     const project = projectsData[Number(projectIndex)]
 
@@ -30,22 +32,24 @@ const SelectedProject = () => {
     })
 
     useEffect(() => {
-        gsap.fromTo(
-            "#selectedProjectElement",
-            {
-                translateX: "-=50",
-                opacity: 0,
-                scale: .8,
-            },
-            {
-                translateX: 0,
-                scale: 1,
-                opacity: 1,
-                duration: .4,
-                ease: "back",
-                stagger: .1,
-            });
-    }, []);
+        if (!reduceMotion) {
+            gsap.fromTo(
+                "#selectedProjectElement",
+                {
+                    translateX: "-=50",
+                    opacity: 0,
+                    scale: .8,
+                },
+                {
+                    translateX: 0,
+                    scale: 1,
+                    opacity: 1,
+                    duration: .4,
+                    ease: "back",
+                    stagger: .1,
+                });
+        }
+    }, [reduceMotion]);
 
     return (
         <>
