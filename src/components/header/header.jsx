@@ -24,7 +24,7 @@ const Header = () => {
         };
     }, []);
 
-    const hamburgerAnimationOpen = (rm) => {
+    const hamburgerAnimationOpen = () => {
         if (!reduceMotion) {
             gsap.fromTo(
                 "#hamburgerNavLink",
@@ -74,7 +74,7 @@ const Header = () => {
         }
     }
 
-    const hamburgerAnimationClose = (rm) => {
+    const hamburgerAnimationClose = () => {
         if (!reduceMotion) {
             gsap.fromTo(
                 "#hamburgerNavLink",
@@ -151,7 +151,7 @@ const Header = () => {
             <button className={hamburgerOpen ? styles.hamburgerIconActive : styles.hamburgerIcon}
                     onClick={() => {
                         setHamburgerOpen(hamburgerOpen => !hamburgerOpen)
-                        {hamburgerOpen ? hamburgerAnimationClose(reduceMotion) : hamburgerAnimationOpen(reduceMotion)}
+                        {hamburgerOpen ? hamburgerAnimationClose() : hamburgerAnimationOpen()}
                     }}>
                 <div className={styles.hamburgerIconSVG}>
                     <div className={styles.hamburgerStroke1} id={"hamburgerIconStroke1"}/>
@@ -172,7 +172,7 @@ const Header = () => {
                       onClick={() => {
                           setHamburgerOpen(false)
                           scrollToTop()
-                          {hamburgerOpen ? hamburgerAnimationClose(reduceMotion) : hamburgerAnimationOpen(reduceMotion)}
+                          {hamburgerOpen ? hamburgerAnimationClose() : hamburgerAnimationOpen()}
                       }}>
                     Portfolio
                 </Link>
@@ -184,7 +184,7 @@ const Header = () => {
                       onClick={() => {
                           setHamburgerOpen(false)
                           scrollToTop()
-                          {hamburgerOpen ? hamburgerAnimationClose(reduceMotion) : hamburgerAnimationOpen(reduceMotion)}
+                          {hamburgerOpen ? hamburgerAnimationClose() : hamburgerAnimationOpen()}
                       }}>
                     Home
                 </Link>
@@ -196,7 +196,7 @@ const Header = () => {
                       onClick={() => {
                           setHamburgerOpen(false)
                           scrollToTop()
-                          {hamburgerOpen ? hamburgerAnimationClose(reduceMotion) : hamburgerAnimationOpen(reduceMotion)}
+                          {hamburgerOpen ? hamburgerAnimationClose() : hamburgerAnimationOpen()}
                       }}>
                     About me
                 </Link>
