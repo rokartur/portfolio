@@ -27,16 +27,16 @@
     color: $white;
 
     .reduceMotionButton {
-      padding: 6px;
-      width: 50px;
+      padding: 4px;
+      width: 42px;
 
       display: flex;
 
       background-color: transparent;
-      border: 2px solid $destructive-300;
+      border: 2px solid $destructive-400;
       border-radius: 8px;
 
-      transition: border .2s, border-radius .2s, padding .2s;
+      transition: border .2s, border-radius .2s, padding .2s, transform .2s;
 
       &:hover {
         border-radius: 16px;
@@ -47,19 +47,21 @@
       }
 
       &:active {
-        border: 2px solid $success-300;
+        transform: scale(.9);
+
+        border: 2px solid $success-400;
 
         .reduceMotionButtonDot {
           transform: translateX(18px);
 
-          background-color: $success-300;
+          background-color: $success-400;
         }
       }
 
       .reduceMotionButtonDot {
-        width: 16px;
-        height: 16px;
-        background-color: $destructive-300;
+        width: 12px;
+        height: 12px;
+        background-color: $destructive-400;
         border-radius: 4px;
 
         transition: transform .2s, background-color .2s, border-radius .2s;
@@ -76,12 +78,25 @@
 
         background-color: $success-300;
       }
+
+      &:active {
+        transform: scale(.9);
+
+        border: 2px solid $destructive-400;
+
+        .reduceMotionButtonDot {
+          transform: translateX(0);
+
+          background-color: $destructive-400;
+        }
+      }
     }
   }
 
   .footerContent {
     display: flex;
     justify-content: space-between;
+    align-items: end;
 
     @media screen and (max-width: 500px) {
       justify-content: end;
@@ -105,12 +120,17 @@
 
         border-radius: 4px;
 
-        transition: border-radius .4s;
+        transition: border-radius .4s, transform .4s;
 
         &:hover {
           border-radius: 100%;
+          transform: scale(1.3);
 
           svg { animation: rotateIcon 1s both }
+        }
+
+        &:active {
+          transform: scale(.9);
         }
       }
     }
@@ -121,7 +141,6 @@
       line-height: 100%;
       color: $white;
     }
-
   }
 }
 
