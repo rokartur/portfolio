@@ -18,6 +18,9 @@ body {
 
   font-family: "Clash Display", sans-serif;
   color: $white;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+
   background-color: #0A0A0A;
 
   scroll-behavior: smooth;
