@@ -11,11 +11,11 @@ import SEO from "../components/seo/seo.jsx";
 import scrollToTop from "../utils/scrollToTop.jsx";
 import useLocalStorage from "use-local-storage";
 
+dayjs.extend(relativeTime)
+const myAge = dayjs("2004-02-05").toNow(true)
+
 const AboutMe = () => {
     scrollToTop()
-
-    dayjs.extend(relativeTime)
-    const myAge = dayjs("2004-02-05").toNow(true)
 
     const [reduceMotion] = useLocalStorage("reduceMotion");
 
@@ -25,12 +25,12 @@ const AboutMe = () => {
                 "#aboutMeItem",
                 {
                     translateX: "-=50",
-                    opacity: 0,
+                    autoAlpha: 0,
                     scale: .8,
                 },
                 {
                     translateX: 0,
-                    opacity: 1,
+                    autoAlpha: 1,
                     scale: 1,
                     duration: .4,
                     ease: "back",
@@ -41,12 +41,12 @@ const AboutMe = () => {
                 "#aboutMeLink",
                 {
                     translateY: "+=50",
-                    opacity: 0,
+                    autoAlpha: 0,
                     scale: .8,
                 },
                 {
                     translateY: 0,
-                    opacity: 1,
+                    autoAlpha: 1,
                     scale: 1,
                     duration: .4,
                     ease: "back",
@@ -55,7 +55,6 @@ const AboutMe = () => {
                 });
         }
     }, [reduceMotion]);
-
 
     return (
         <>

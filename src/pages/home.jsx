@@ -12,24 +12,24 @@ import scrollToTop from "../utils/scrollToTop.jsx";
 
 import nethizer1 from "../assets/images/projects/nethizer/nethizer-1.png"
 
+dayjs.extend(relativeTime)
+const myAge = dayjs("2004-02-05").toNow(true)
+
 const Home = () => {
     scrollToTop()
-
-    dayjs.extend(relativeTime)
-    const myAge = dayjs("2004-02-05").toNow(true)
 
     useEffect(() => {
         gsap.fromTo(
             "#orange-circle-1",
             {
-                width: 0,
-                height: 0,
+                width: "0",
+                height: "0",
                 borderRadius: "100%",
                 backgroundColor: "#FE481C"
             },
             {
-                width: window.innerWidth > 850 ? 700 : 300,
-                height: window.innerWidth > 850 ? 500 : 300,
+                width: window.innerWidth > 850 ? "+=700" : "+=300",
+                height: window.innerWidth > 850 ? "+=500" : "+=300",
                 ease: "back",
                 duration: .4,
                 scrollTrigger: {
@@ -77,11 +77,11 @@ const Home = () => {
             "#firstProjetImage",
             {
                 translateX: "-=100",
-                opacity: 0,
+                autoAlpha: 0,
             },
             {
                 translateX: "0",
-                opacity: 1,
+                autoAlpha: 1,
                 duration: .4,
                 ease: "ease",
                 scrollTrigger: {
@@ -96,11 +96,11 @@ const Home = () => {
             "#firstProjectDetails",
             {
                 translateY: "-=50",
-                opacity: 0,
+                autoAlpha: 0,
             },
             {
                 translateY: 0,
-                opacity: 1,
+                autoAlpha: 1,
                 duration: .4,
                 ease: "back",
                 stagger: .1,
@@ -132,11 +132,11 @@ const Home = () => {
         gsap.fromTo(
             "#skillCategory",
             {
-                opacity: 0,
+                autoAlpha: 0,
                 translateX: "-=50",
             },
             {
-                opacity: 1,
+                autoAlpha: 1,
                 translateX: "0",
                 duration: .4,
                 ease: "back",

@@ -5,9 +5,9 @@ import {useEffect} from "react";
 import SEO from "../components/seo/seo.jsx";
 import CustomImage from "../components/customImage/customImage.jsx";
 import scrollToTop from "../utils/scrollToTop.jsx";
+import useLocalStorage from "use-local-storage";
 
 import projectsData from "../data/projects.data.jsx";
-import useLocalStorage from "use-local-storage";
 
 const AllProjects = () => {
     scrollToTop()
@@ -20,12 +20,12 @@ const AllProjects = () => {
                 "#heading",
                 {
                     translateX: "-=100",
-                    opacity: 0,
+                    autoAlpha: 0,
                     scale: .8,
                 },
                 {
                     translateX: 0,
-                    opacity: 1,
+                    autoAlpha: 1,
                     scale: 1,
                     duration: .4,
                     ease: "back",
@@ -35,12 +35,12 @@ const AllProjects = () => {
                 "#project",
                 {
                     translateY: "+=25",
-                    opacity: 0,
+                    autoAlpha: 0,
                     scale: .8
                 },
                 {
                     translateY: "0",
-                    opacity: 1,
+                    autoAlpha: 1,
                     scale: 1,
                     duration: .4,
                     ease: "back",

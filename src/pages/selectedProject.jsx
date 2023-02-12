@@ -8,9 +8,9 @@ import {gsap} from "gsap";
 import SEO from "../components/seo/seo.jsx";
 import CustomImage from "../components/customImage/customImage.jsx";
 import scrollToTop from "../utils/scrollToTop.jsx";
+import useLocalStorage from "use-local-storage";
 
 import projectsData from "../data/projects.data.jsx";
-import useLocalStorage from "use-local-storage";
 
 const SelectedProject = () => {
     scrollToTop()
@@ -37,13 +37,13 @@ const SelectedProject = () => {
                 "#selectedProjectElement",
                 {
                     translateX: "-=50",
-                    opacity: 0,
+                    autoAlpha: 0,
                     scale: .8,
                 },
                 {
                     translateX: 0,
                     scale: 1,
-                    opacity: 1,
+                    autoAlpha: 1,
                     duration: .4,
                     ease: "back",
                     stagger: .1,

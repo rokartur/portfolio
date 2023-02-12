@@ -66,7 +66,7 @@ const Header = () => {
                 "#hamburgerIconStroke3",
                 {
                     x: "+=20",
-                    opacity: 0,
+                    autoAlpha: 0,
                     duration: .3,
                     ease: "back",
                 }
@@ -91,17 +91,17 @@ const Header = () => {
 
             gsap.to(
                 "#hamburgerIconStroke1",
-                {width: 16, x: 0, y: 0, rotate: 0, opacity: 1, duration: .3, ease: "back"}
+                {width: 16, x: 0, y: 0, rotate: 0, autoAlpha: 1, duration: .3, ease: "back"}
             );
 
             gsap.to(
                 "#hamburgerIconStroke2",
-                {width: 16, x: 0, y: 0, rotate: 0, opacity: 1, duration: .3, ease: "back"}
+                {width: 16, x: 0, y: 0, rotate: 0, autoAlpha: 1, duration: .3, ease: "back"}
             );
 
             gsap.to(
                 "#hamburgerIconStroke3",
-                {width: 9, x: 0, y: 0, rotate: 0, opacity: 1, duration: .3, ease: "back"}
+                {width: 9, x: 0, y: 0, rotate: 0, autoAlpha: 1, duration: .3, ease: "back"}
             );
         }
     }
