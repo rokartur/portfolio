@@ -83,7 +83,9 @@ const SelectedProject = () => {
                                         Links
                                     </p>
 
-                                    <div className={styles.row}>
+                                    <div className={styles.row}
+                                         id={"selectedProjectElement"}
+                                    >
                                         {project.links.map(
                                             ({
                                                  name,
@@ -91,7 +93,7 @@ const SelectedProject = () => {
                                                  icon
                                              }) => {
                                                 return (
-                                                    <a id={"selectedProjectElement"} className={styles.link} href={url} target={"_blank"}>
+                                                    <a className={styles.link} href={url} target={"_blank"}>
                                                         <span>
                                                             {icon}
                                                         </span>

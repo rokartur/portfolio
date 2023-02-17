@@ -109,7 +109,7 @@
           text-align: center;
           color: $white;
 
-          transition: box-shadow .2s;
+          transition: box-shadow .2s, transform .2s;
 
           &:hover {
             box-shadow: 3px 3px $white;
@@ -155,11 +155,12 @@
         gap: 4px;
 
         p:nth-child(1) {
-          font-weight: 500;
+          font-weight: 600;
           font-size: 14px;
           line-height: 100%;
           letter-spacing: 1px;
           color: $white;
+          text-transform: uppercase;
           text-align: end;
 
           @media screen and (max-width: 680px) {
@@ -168,9 +169,9 @@
         }
 
         p:nth-child(2) {
-          font-weight: 300;
+          font-weight: 400;
           font-size: 16px;
-          line-height: 20px;
+          line-height: 100%;
           color: $white;
           text-align: end;
 
