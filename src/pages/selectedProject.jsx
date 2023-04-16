@@ -54,9 +54,7 @@ const SelectedProject = () => {
     return (
         <>
             <Match>
-                {
-                    ({ url }) => {setPath(url)}
-                }
+                {({ url }) => {setPath(url)}}
             </Match>
 
             <SEO
