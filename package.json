@@ -1,4 +1,5 @@
 {
+  "homepage": "https://rokartur.github.io/portfolio",
   "name": "rokartur",
   "private": true,
   "version": "1.0.0",
@@ -6,6 +7,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build --mode production --assetsDir . --outDir build --base /",
+    "predeploy": "vite build --assetsDir . --outDir build --base /",
+    "deploy" : "gh-pages -d build",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -25,6 +28,7 @@
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.5.0",
+    "gh-pages": "^6.1.1",
     "vite": "^4.1.1"
   }
 }
