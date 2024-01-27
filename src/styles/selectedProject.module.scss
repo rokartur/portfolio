@@ -28,7 +28,7 @@
     @media screen and (max-width: 680px) {
       justify-content: center;
       flex-direction: column;
-      gap: 64px;
+      gap: 32px;
     }
 
     .heading {
@@ -57,7 +57,7 @@
         transition: font-size .4s;
 
         @media screen and (max-width: 550px) {
-          font-size: 64px;
+          font-size: 46px;
         }
       }
 
@@ -137,6 +137,7 @@
       gap: 24px;
 
       @media screen and (max-width: 680px) {
+        padding: 0;
         align-items: start;
       }
 

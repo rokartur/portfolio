@@ -389,7 +389,7 @@ const projectsData = [
   },
   {
     id: 6,
-    name: 'parafiatapkowice',
+    name: 'parafia tapkowice',
     thumbnail: parafiaCover,
     type: 'website & dashboard',
     date: 'September 5, 2023',
