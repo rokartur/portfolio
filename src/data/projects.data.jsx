@@ -358,7 +358,7 @@ const projectsData = [
     links: [
       {
         name: 'Design in Figma',
-        url: 'https://www.figma.com/file/A2ILSIgaSeaTQS2YCFPtMU/gornachata?type=design&node-id=0%3A1&mode=design&t=O61TEKCmFeQ51BnD-1',
+        url: 'https://www.figma.com/file/A2ILSIgaSeaTQS2YCFPtMU/gornachata?type=design&node-id=0%3A1&mode=design&t=9ZqLAopoRSUyOdKn-1',
         icon:
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
