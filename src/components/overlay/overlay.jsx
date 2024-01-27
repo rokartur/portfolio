@@ -1,11 +1,5 @@
-import styles from "./overlay.module.scss";
+import styles from './overlay.module.scss'
 
-const Overlay = ({ children }) => {
-    return (
-        <main className={styles.overlay}>
-            {children}
-        </main>
-    );
-}
+const Overlay = ({ children }) => <main className={styles.overlay}>{children}</main>
 
-export default Overlay;
+export default Overlay
