@@ -17,12 +17,10 @@ import mit1 from '../assets/images/projects/mergeit/mit-1.png'
 import mit2 from '../assets/images/projects/mergeit/mit-2.png'
 
 import warzywniokCover from '../assets/images/projects/warzywniok/thumbnail.png'
-
 import xdddCover from '../assets/images/projects/xddd/thumbnail.png'
-
 import parafiaCover from '../assets/images/projects/parafiatapkowice/thumbnail.png'
-
 import gornachataCover from '../assets/images/projects/gornachata/thumbnail.png'
+import disacCover from "../assets/images/projects/disac/thumbnail.png"
 
 const projectsData = [
 	{
@@ -554,6 +552,46 @@ const projectsData = [
 		images: [
 			{
 				src: warzywniokCover,
+				width: 1280,
+				height: 680,
+			},
+		],
+	},
+	{
+		id: 9,
+		name: 'dis.ac',
+		thumbnail: disacCover,
+		type: 'shop',
+		date: 'coming soon',
+		role: 'Owner, Developer & Designer',
+		path: 'disac',
+		links: [
+			{
+				name: 'Design in Figma',
+				url: 'https://www.figma.com/file/bU0ZLO1zD2ecaCowFIjuTA/disac?type=design&node-id=49%3A2625&mode=design&t=4LY2pF9pdmhp3rH5-1',
+				icon:
+					<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M10.0001 1.66663H7.22504C5.6917 1.66663 4.45007 2.90829 4.45007 4.44163C4.45007 5.97496 5.6917 7.21663 7.22504 7.21663H10.0001V1.66663Z"
+							fill="#FE481C"/>
+						<path opacity="0.4"
+									d="M10.0001 7.2251H7.22504C5.6917 7.2251 4.45007 8.46677 4.45007 10.0001C4.45007 11.5334 5.6917 12.7751 7.22504 12.7751H10.0001V7.2251Z"
+									fill="#FE481C"/>
+						<path
+							d="M10.0001 12.7749H7.22504C5.6917 12.7749 4.45007 14.0166 4.45007 15.5499C4.45007 17.0832 5.6917 18.3249 7.22504 18.3249C8.75837 18.3249 10.0001 17.0832 10.0001 15.5499V12.7749Z"
+							fill="#FE481C"/>
+						<path opacity="0.4"
+									d="M10 1.66663H12.775C14.3083 1.66663 15.55 2.90829 15.55 4.44163C15.55 5.97496 14.3083 7.21663 12.775 7.21663H10V1.66663Z"
+									fill="#FE481C"/>
+						<path
+							d="M12.775 7.2251C14.3083 7.2251 15.55 8.46677 15.55 10.0001C15.55 11.5334 14.3083 12.7751 12.775 12.7751C11.2417 12.7751 10 11.5334 10 10.0001C10 8.46677 11.2417 7.2251 12.775 7.2251Z"
+							fill="#FE481C"/>
+					</svg>,
+			},
+		],
+		images: [
+			{
+				src: disacCover,
 				width: 1280,
 				height: 680,
 			},

@@ -51,28 +51,16 @@ const AllProjects = () => {
 
 	return (
 		<>
-			<SEO
-				title={'portfolio'}
-				description={'My all projects'}
-				path={'/portfolio'}
-			/>
+			<SEO title={'portfolio'} description={'My all projects'}/>
 
 			<main className={styles.mainContainer}>
 				<div className={styles.heading}>
-					<h1 id={'heading'}>
-						portfolio
-					</h1>
+					<h1 id={'heading'}>portfolio</h1>
 				</div>
 
 				<div className={styles.projectsList}>
 					{projectsData.map(
-						({
-							 id,
-							 name,
-							 thumbnail,
-							 type,
-							 path,
-						 }) => (
+						({ id, name, thumbnail, type, path}) => (
 							<a key={id}
 								 id={'project'}
 								 className={styles.project}
@@ -87,13 +75,8 @@ const AllProjects = () => {
 								/>
 
 								<div className={styles.projectDetails}>
-									<p className={styles.projectType}>
-										{type}
-									</p>
-
-									<p className={styles.projectName}>
-										{name}
-									</p>
+									<p className={styles.projectType}>{type}</p>
+									<p className={styles.projectName}>{name}</p>
 								</div>
 							</a>
 						))}

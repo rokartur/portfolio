@@ -68,57 +68,55 @@ const AboutMe = () => {
 			</svg>,
 			label: 'Email',
 		},
-      {
-          url: 'https://t.me/rokartur',
-          icon: <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
-                     xmlns="http://www.w3.org/2000/svg">
-              <path fillRule="evenodd" clipRule="evenodd"
-                    d="M7.24253 15.8312C11.9069 13.799 15.0171 12.4593 16.5734 11.812C21.0167 9.96384 21.94 9.64279 22.5418 9.63219C22.6742 9.62986 22.9701 9.66266 23.1618 9.81821C23.3237 9.94956 23.3682 10.127 23.3895 10.2515C23.4109 10.376 23.4374 10.6597 23.4163 10.8814C23.1755 13.4114 22.1336 19.5509 21.6036 22.3846C21.3793 23.5836 20.9377 23.9856 20.5101 24.0249C19.581 24.1104 18.8754 23.4109 17.9755 22.821C16.5673 21.8979 15.7717 21.3232 14.4048 20.4225C12.8251 19.3815 13.8492 18.8093 14.7494 17.8743C14.985 17.6296 19.0789 13.9059 19.1581 13.5681C19.168 13.5258 19.1772 13.3684 19.0837 13.2852C18.9901 13.2021 18.8521 13.2305 18.7524 13.2531C18.6112 13.2852 16.3615 14.7721 12.0035 17.7139C11.365 18.1523 10.7866 18.366 10.2684 18.3548C9.69711 18.3424 8.59819 18.0318 7.78125 17.7662C6.77925 17.4405 5.98288 17.2683 6.05223 16.7152C6.08835 16.427 6.48512 16.1324 7.24253 15.8312Z"
-                    fill="black"/>
-          </svg>,
-          label: 'Email',
-      },
-  ]
+		{
+			url: 'https://t.me/rokartur',
+			icon: <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+								 xmlns="http://www.w3.org/2000/svg">
+				<path fillRule="evenodd" clipRule="evenodd"
+							d="M7.24253 15.8312C11.9069 13.799 15.0171 12.4593 16.5734 11.812C21.0167 9.96384 21.94 9.64279 22.5418 9.63219C22.6742 9.62986 22.9701 9.66266 23.1618 9.81821C23.3237 9.94956 23.3682 10.127 23.3895 10.2515C23.4109 10.376 23.4374 10.6597 23.4163 10.8814C23.1755 13.4114 22.1336 19.5509 21.6036 22.3846C21.3793 23.5836 20.9377 23.9856 20.5101 24.0249C19.581 24.1104 18.8754 23.4109 17.9755 22.821C16.5673 21.8979 15.7717 21.3232 14.4048 20.4225C12.8251 19.3815 13.8492 18.8093 14.7494 17.8743C14.985 17.6296 19.0789 13.9059 19.1581 13.5681C19.168 13.5258 19.1772 13.3684 19.0837 13.2852C18.9901 13.2021 18.8521 13.2305 18.7524 13.2531C18.6112 13.2852 16.3615 14.7721 12.0035 17.7139C11.365 18.1523 10.7866 18.366 10.2684 18.3548C9.69711 18.3424 8.59819 18.0318 7.78125 17.7662C6.77925 17.4405 5.98288 17.2683 6.05223 16.7152C6.08835 16.427 6.48512 16.1324 7.24253 15.8312Z"
+							fill="black"/>
+			</svg>,
+			label: 'Email',
+		},
+	]
 
-    return (
-      <>
-          <SEO
-            title={'about me'}
-            description={`I'm Artur, ${myAge} old student. I'm a passionate programmer and web designer.`}
-          />
+	return (
+		<>
+			<SEO
+				title={'about me'}
+				description={`I'm Artur, ${myAge} old student. I'm a passionate programmer and web designer.`}
+			/>
 
-          <main className={styles.mainContainer}>
-              <section className={styles.text}>
-                  <p className={styles.overline} id={'aboutMeItem'}>A few words</p>
-                  <h1 className={styles.heading} id={'aboutMeItem'}>About me</h1>
-                  <p className={styles.supportingText} id={'aboutMeItem'}>
-                      I'm Artur, {myAge} old student. I'm a passionate programmer and web designer. I started
-                      programming
-                      at the
-                      end of 2018.
-                      Furthermore, I'm a perfectionist, I try very hard to take care of the details of my works.
-                      I'm not afraid to take on new challenges!
-                  </p>
-              </section>
+			<main className={styles.mainContainer}>
+				<section className={styles.text}>
+					<p className={styles.overline} id={'aboutMeItem'}>A few words</p>
+					<h1 className={styles.heading} id={'aboutMeItem'}>About me</h1>
+					<p className={styles.supportingText} id={'aboutMeItem'}>
+						I'm Artur, {myAge} old student. I'm a passionate programmer and web designer. I started
+						programming at the end of 2018. Furthermore, I'm a perfectionist, I try very hard to take care
+						of the details of my works. I'm not afraid to take on new challenges!
+					</p>
+				</section>
 
-              <section className={styles.waysToContactMe}>
-                  <h2 className={styles.secondHeading} id={'aboutMeItem'}>
-                      choose <span style={{ color: '#FE481C' }}>your</span> way to contact me
-                  </h2>
+				<section className={styles.waysToContactMe}>
+					<h2 className={styles.secondHeading} id={'aboutMeItem'}>
+						choose <span style={{ color: '#FE481C' }}>your</span> way to contact me
+					</h2>
 
-                  <div className={styles.aboutMeLinks}>
-                      {links.map(({ url, icon, label }) => (
-                        <a className={styles.aboutMeLink} id={'aboutMeLink'} href={url} target={'_blank'}>
-              <span>
-                {icon}
-              </span>
+					<div className={styles.aboutMeLinks}>
+						{links.map(({ url, icon, label }) => (
+							<a className={styles.aboutMeLink} id={'aboutMeLink'} href={url} target={'_blank'}>
+								<span>
+									{icon}
+								</span>
 								{label}
 							</a>
 						))}
 					</div>
 				</section>
 			</main>
-		</>)
+		</>
+	)
 }
 
 export default AboutMe

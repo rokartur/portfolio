@@ -48,11 +48,7 @@ const SelectedProject = () => {
 				}}
 			</Match>
 
-			<SEO
-				title={project ? project.name : 'Project doesn\'t exist'}
-				description={'Projekt wykonany przez Artura Rok'}
-				path={path}
-			/>
+			<SEO title={project ? project.name : 'Project doesn\'t exist'} description={'Projekt wykonany przez Artura Rok'}/>
 
 			{project && <main className={styles.mainContainer}>
 				<section className={styles.projectContent}>
@@ -93,11 +89,7 @@ const SelectedProject = () => {
 				</section>
 
 				<section id={'selectedProjectElement'} className={styles.carouselContainer}>
-					<Carousel
-						autoPlay
-						loop={true}
-						interval={5000}
-					>
+					<Carousel autoPlay loop={true} interval={5000}>
 						{project.images.map(({ src, width, height }) => (
 							<CustomImage
 								className={styles.slideImage}
